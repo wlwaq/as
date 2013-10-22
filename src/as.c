@@ -650,6 +650,10 @@ int fill_certificate_auth_resp_packet(certificate_auth_requ *recv_certificate_au
 		memcpy(&(send_certificate_auth_resp_buffer->cervalidresult.certificate2),&(recv_certificate_auth_requ_buffer->staaecer),sizeof(certificate));
 	}
 
+	send_certificate_auth_resp_buffer->cervalidresult.cerresult1 = 1; //ASUE证书验证正确有效
+	send_certificate_auth_resp_buffer->cervalidresult.cerresult2 = 1; //AE证书验证正确有效
+
+
 	if ((asuecertcheck == 0) && (aecertcheck == 0))
 	{
 		//验证AE和ASUE的数字证书
