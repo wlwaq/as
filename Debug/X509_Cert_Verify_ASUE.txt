@@ -1,1 +1,1 @@
-./cert/usercert1.pem: OK
+./cert/camerareceive.pem: OK
